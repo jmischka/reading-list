@@ -1,5 +1,18 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { keyframes} from 'styled-components'
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
 
 const ListItemStyles = styled.li`
     position: relative;
@@ -8,6 +21,7 @@ const ListItemStyles = styled.li`
     height: auto;
     padding: 0;
     border-bottom: 1px dotted #F2F2F2;
+    animation: ${fadeIn} .4s; 
 
     a {
         margin: 0;
